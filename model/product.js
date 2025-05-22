@@ -13,7 +13,7 @@ const productSchema = new mongoose.Schema({
         type:mongoose.Schema.ObjectId,
         ref:"category1"
     },
-    image:{
+    thumbnail:{
         type:String,
     },
     createdAt:{
