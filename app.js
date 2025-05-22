@@ -1,6 +1,7 @@
 const express = require("express")
 const mongoose = require("mongoose")
 require("dotenv/config")
+const cors = require("cors")
 
 const product = require("./route/productRoute")
 const user = require("./route/userRoute")
@@ -8,6 +9,7 @@ const category = require("./route/categoryRoute")
 
 const app = express()
 app.use(express.json())
+app.use(cors())
 
 app.get("/",(req,res)=>{
     res.send("hii")
