@@ -9,6 +9,10 @@ const productSchema = new mongoose.Schema({
         type:Number,
         required:true
     },
+    thumbnail:{
+        type:String,
+        required:true
+    },
     category:{
         type:mongoose.Schema.ObjectId,
         ref:"category1"
@@ -17,6 +21,6 @@ const productSchema = new mongoose.Schema({
         type:Date,
         default:Date.now()
     }
-})
+}) 
 
 module.exports = mongoose.model("product01",productSchema)
