@@ -6,6 +6,7 @@ const cors = require("cors")
 const product = require("./route/productRoute")
 const user = require("./route/userRoute")
 const category = require("./route/categoryRoute")
+const order = require("./route/orderRoute")
 
 const app = express()
 app.use(express.json())
@@ -18,6 +19,7 @@ app.get("/",(req,res)=>{
 app.use("/api/product",product)
 app.use("/api/user",user )
 app.use("/api/category",category)
+app.use("/api/order",order)
 
 app.listen(process.env.PORT,()=>{console.log("running....🏃‍♂️‍➡️");
 })
