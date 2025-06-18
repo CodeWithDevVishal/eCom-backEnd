@@ -8,6 +8,9 @@ const orderSchema = new mongoose.Schema({
     },
     total: {
         type: Number
+    },
+    quantity:{
+        type:Number
     }
 },{timestamps:true})
 
